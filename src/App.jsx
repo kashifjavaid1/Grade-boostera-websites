@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar/Navbar.jsx';
+import heroGirl from './assets/take-online-class.webp';
+import { FiPhoneCall } from "react-icons/fi";
+import './index.css';
+import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Navbar />
+      <WhatsAppWidget />
+      <section className="hero-section">
+        <div className="hero-container">
+          <div className="hero-left">
+            <h1 className="hero-title">
+              Take My Online Class <br />
+              for Me with <span className="highlight">Distinction Grades</span>
+            </h1>
+            <p className="hero-description">
+              TakeMyOnlineClassUS is a leading platform that offers to handle student’s online classes with proficiency. Busy students frequently seeking assistance and ask “Can I pay someone to take my online class”, we are here to exactly resolve your query. We have designed our services to lighten the burden and ensure guaranteed academic success.
+            </p>
+            <div className="hero-buttons">
+              <button className="btn-talk">
+                <FiPhoneCall className="btn-icon" /> Talk to expert
+              </button>
+              <button className="btn-quote">Get A Quote</button>
+            </div>
+          </div>
 
-export default App
+          <div className="hero-right">
+            <img src={heroGirl} alt="Student" className="hero-image" />
+          </div>
+        </div>
+      </section>
+
+    </>
+  );
+}

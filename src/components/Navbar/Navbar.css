@@ -1,0 +1,119 @@
+.navbar {
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 15px 50px;
+}
+
+.navbar-logo img {
+    height: 55px;
+    width: auto;
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #14125c;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #14125c;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.quote-btn {
+    background-color: #14125c;
+    color: #ffffff;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    transition: all 0.3s ease;
+}
+
+
+.whatsapp-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f4f5fa;
+    padding: 15px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.phone {
+    font-weight: 700;
+    color: #1a237e;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.phone-icon {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-container {
+        padding: 15px 20px;
+    }
+}
