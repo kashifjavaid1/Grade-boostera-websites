@@ -5,12 +5,17 @@
     font-family: 'Public Sans', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .hero-section {
     width: 100%;
     padding: 80px 0;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .hero-container {
@@ -36,11 +41,16 @@
     margin-bottom: 25px;
 }
 
+.highlight {
+    color: #14125C;
+}
+
 .hero-description {
-    font-size: 21px;
+    font-size: 19px;
     font-weight: 400;
-    color: black;
+    color: #333;
     margin-bottom: 35px;
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -48,36 +58,36 @@
     gap: 20px;
 }
 
-.btn-talk {
-    background-color: #4461f2;
-    color: white;
+.btn-talk,
+.btn-quote {
     padding: 16px 32px;
     border: none;
     border-radius: 8px;
     font-weight: 700;
     cursor: pointer;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-talk {
+    background-color: #4461f2;
+    color: white;
 }
 
 .btn-quote {
     background-color: #ffcc00;
     color: black;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 16px;
 }
 
+.btn-talk:hover,
 .btn-quote:hover {
     background-color: #14125c;
     color: white;
-}
-
-.btn-talk:hover {
-    background-color: #14125c;
-    color: white;
+    transform: translateY(-2px);
 }
 
 .hero-right {
@@ -93,17 +103,110 @@
     object-fit: contain;
 }
 
-.btn-talk {
-    background-color: #4461f2;
-    color: white;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 16px;
+.logos-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+.logos-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+
+.tool-logo {
+    width: 110px;
+    height: auto;
+    filter: grayscale(0%);
     transition: 0.3s;
+}
+
+.tool-logo:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-widget-container {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    z-index: 9999;
+}
+
+
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .hero-left {
+        order: 1;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 23px;
+        text-align: justify;
+        line-height: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-talk,
+    .btn-quote {
+        flex: 1;
+        padding: 12px 10px;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .hero-right {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 90%;
+    }
+
+    .logos-container {
+        gap: 30px;
+    }
+
+    .tool-logo {
+        width: 70px;
+    }
 }

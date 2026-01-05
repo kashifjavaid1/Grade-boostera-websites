@@ -1,10 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 import heroGirl from './assets/take-online-class.webp';
+import tool_logo_1 from './assets/populi-logo.webp';
+import tool_logo_2 from './assets/new_populi_logo-1.svg';
+import tool_logo_3 from './assets/BB-logo.webp';
+import tool_logo_4 from './assets/logo090-1.svg';
+import tool_logo_5 from './assets/images-1.svg';
+
 import { FiPhoneCall } from "react-icons/fi";
 import './index.css';
 import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
-
 export default function App() {
   return (
     <>
@@ -33,7 +38,15 @@ export default function App() {
           </div>
         </div>
       </section>
-
+      <section className="logos-section">
+        <div className="logos-container">
+          <img src={tool_logo_1} alt="Populi" className="tool-logo" />
+          <img src={tool_logo_2} alt="Canvas" className="tool-logo" />
+          <img src={tool_logo_3} alt="Blackboard" className="tool-logo" />
+          <img src={tool_logo_4} alt="Moodle" className="tool-logo" />
+          <img src={tool_logo_5} alt="Google Classroom" className="tool-logo" />
+        </div>
+      </section>
     </>
   );
 }

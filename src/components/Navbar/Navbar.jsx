@@ -1,39 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/TakeMyOnline-logo.png';
 import { FiPhoneCall } from "react-icons/fi";
+import { HiMenu, HiX } from "react-icons/hi";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const openWhatsApp = () => {
+    window.open("https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class.", "_blank");
+  };
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logo} alt="TakeMyOnlineClassUS Logo" />
         </div>
-
-        <div className="navbar-menu">
+        <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
           <ul className="navbar-links">
-            <li><a href="/" className="nav-link">Home</a></li>
-            <li><a href="/about" className="nav-link">About</a></li>
-            <li><a href="/about" className="nav-link">Subject</a></li>
-            <li><a href="/contact" className="nav-link">Contact Us</a></li>
+            <li><a href="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</a></li>
+            <li><a href="/about" className="nav-link" onClick={() => setIsOpen(false)}>About</a></li>
+            <li><a href="/subject" className="nav-link" onClick={() => setIsOpen(false)}>Subject</a></li>
+            <li><a href="/contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact Us</a></li>
           </ul>
         </div>
-
-        <div className="navbar-actions">
-          <button className="quote-btn">Get a Quote</button>
-
-          <a
-            href="https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whatsapp-link"
-          >
+        <div className="navbar-right-side">
+          <button className="quote-btn" onClick={openWhatsApp}>
+            Get a Quote
+          </button>
+          <a href="tel:03481005573" className="phone-desktop-only">
             <div className="phone-container">
-              <span className="phone-icon"><FiPhoneCall className="btn-icon" /></span>
+              <span className="phone-icon"><FiPhoneCall /></span>
               <span className="phone">03481005573</span>
             </div>
           </a>
+          <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <HiX /> : <HiMenu />}
+          </div>
         </div>
       </div>
     </nav>

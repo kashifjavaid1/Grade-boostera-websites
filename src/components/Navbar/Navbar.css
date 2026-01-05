@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
 .navbar {
     background-color: #ffffff;
     width: 100%;
@@ -5,7 +12,6 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    font-family: 'Public Sans', sans-serif;
 }
 
 .navbar-container {
@@ -15,6 +21,7 @@
     max-width: 1350px;
     margin: 0 auto;
     padding: 15px 50px;
+    height: 85px;
 }
 
 .navbar-logo img {
@@ -27,8 +34,6 @@
     display: flex;
     list-style: none;
     gap: 35px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-link {
@@ -36,63 +41,42 @@
     color: #333333;
     font-weight: 600;
     font-size: 16px;
-    position: relative;
-    padding: 5px 0;
     transition: color 0.3s ease;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: #14125c;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #14125c;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.navbar-actions {
+.navbar-right-side {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
 }
 
 .quote-btn {
     background-color: #14125c;
     color: #ffffff;
     border: none;
-    padding: 15px 15px;
+    padding: 12px 25px;
     border-radius: 6px;
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
-    font-family: 'Public Sans', sans-serif;
-    transition: all 0.3s ease;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
+.quote-btn:hover {
+    background-color: #4461f2;
+}
 
-.whatsapp-link {
-    text-decoration: none;
-    display: block;
-    color: inherit;
+.phone-desktop-only {
+    text-decoration: none !important;
 }
 
 .phone-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     background-color: #f4f5fa;
-    padding: 15px 15px;
+    padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
 }
@@ -101,19 +85,73 @@
     font-weight: 700;
     color: #1a237e;
     font-size: 15px;
-    white-space: nowrap;
 }
 
-.phone-icon {
-    font-size: 16px;
+.mobile-toggle {
+    display: none;
+    font-size: 32px;
+    color: #14125c;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
+    .navbar-container {
+        padding: 0 20px;
+        height: 75px;
+    }
+
     .navbar-links {
         display: none;
     }
 
-    .navbar-container {
-        padding: 15px 20px;
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .phone-desktop-only {
+        display: none !important;
+    }
+
+    .navbar-logo img {
+        height: 42px;
+    }
+
+    .quote-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #eee;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 0;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        border-bottom: 1px solid #f9f9f9;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 18px 25px;
+        width: 100%;
     }
 }
