@@ -75,6 +75,63 @@ export default function App() {
       </section>
       <Reviews />
       <Services />
+      <section className="why-choose-section">
+        <h2 className="section-title">Why Choose Us</h2>
+
+        <div className="why-choose-grid">
+          <div className="why-card">
+            <div className="why-icon-box blue-bg">✔</div>
+            <div className="why-text">
+              <h4>Quality Guaranteed</h4>
+              <p>Every assignment is crafted by qualified experts who specialize in your subject area, ensuring high-quality, original content.</p>
+            </div>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon-box purple-bg">🔒</div>
+            <div className="why-text">
+              <h4>Strict Confidentiality</h4>
+              <p>Your personal information and assignment details are protected with bank-level security and absolute privacy.</p>
+            </div>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon-box red-bg">🚀</div>
+            <div className="why-text">
+              <h4>On-Time Delivery</h4>
+              <p>We understand the importance of deadlines. Your work will be delivered on or before the agreed deadline, guaranteed.</p>
+            </div>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon-box green-bg">🎧</div>
+            <div className="why-text">
+              <h4>24/7 Support</h4>
+              <p>Our friendly support team is available around the clock to address any questions or concerns you might have.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gold Standard Promise Box */}
+        <div className="gold-promise-box">
+          <div className="promise-left">
+            <h3>Our Gold Standard Promise</h3>
+            <p>EDUOriginals is committed to maintaining the highest standards of academic integrity and excellence. We believe in empowering students with quality assistance that helps them succeed.</p>
+          </div>
+          <div className="promise-right">
+            <ul>
+              <li><span>✔</span> Plagiarism-free work, always</li>
+              <li><span>✔</span> Free revisions within policy</li>
+              <li><span>✔</span> Money-back guarantee</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
     </>
   );
 }

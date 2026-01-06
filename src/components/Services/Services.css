@@ -13,7 +13,7 @@
 }
 
 .services-subtitle {
-    color: #666;
+    color: black;
     max-width: 800px;
     margin: 0 auto 60px;
     line-height: 1.6;
@@ -76,7 +76,7 @@
 
 .service-card p {
     color: black;
-    font-size: 14.5px;
+    font-size: 15.5px;
     line-height: 1.6;
     text-align: center;
 }
