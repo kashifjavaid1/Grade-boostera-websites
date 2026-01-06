@@ -13,6 +13,7 @@ import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
 import RequestForm from './components/RequestForm/RequestForm.jsx';
 import Testimonials from './components/Testimonials/Testimonials.jsx';
 import Reviews from './components/Reviews/Reviews.jsx';
+import Services from './components/Services/Services.jsx';
 export default function App() {
   return (
     <>
@@ -73,6 +74,7 @@ export default function App() {
         </div>
       </section>
       <Reviews />
+      <Services />
     </>
   );
 }
