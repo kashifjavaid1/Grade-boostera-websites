@@ -10,6 +10,7 @@ import tool_logo_5 from './assets/images-1.svg';
 import { FiPhoneCall } from "react-icons/fi";
 import './index.css';
 import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
+import RequestForm from './components/RequestForm/RequestForm.jsx';
 export default function App() {
   return (
     <>
@@ -38,7 +39,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="logos-section">
+      {/* <section className="logos-section">
         <div className="logos-container">
           <img src={tool_logo_1} alt="Populi" className="tool-logo" />
           <img src={tool_logo_2} alt="Canvas" className="tool-logo" />
@@ -46,7 +47,9 @@ export default function App() {
           <img src={tool_logo_4} alt="Moodle" className="tool-logo" />
           <img src={tool_logo_5} alt="Google Classroom" className="tool-logo" />
         </div>
-      </section>
+      </section> */}
+
+      <RequestForm />
     </>
   );
 }

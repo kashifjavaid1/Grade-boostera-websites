@@ -36,12 +36,45 @@
     gap: 35px;
 }
 
+/* 1. Generic anchors se pehle shapes hatayein */
+a::before,
+a:hover::before {
+    display: none;
+}
+
+/* 2. Sirf Navigation Links par design apply karein */
 .nav-link {
     text-decoration: none;
     color: #333333;
     font-weight: 600;
     font-size: 16px;
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.nav-link::before {
+    display: block !important;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #F1C40F, #E74C3C);
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(2px);
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.phone-desktop-only,
+.phone-container,
+.phone {
+    text-decoration: none !important;
 }
 
 .navbar-right-side {
