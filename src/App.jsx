@@ -12,6 +12,7 @@ import './index.css';
 import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
 import RequestForm from './components/RequestForm/RequestForm.jsx';
 import Testimonials from './components/Testimonials/Testimonials.jsx';
+import Reviews from './components/Reviews/Reviews.jsx';
 export default function App() {
   return (
     <>
@@ -71,6 +72,7 @@ export default function App() {
           </p>
         </div>
       </section>
+      <Reviews />
     </>
   );
 }
