@@ -11,6 +11,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import './index.css';
 import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
 import RequestForm from './components/RequestForm/RequestForm.jsx';
+import Testimonials from './components/Testimonials/Testimonials.jsx';
 export default function App() {
   return (
     <>
@@ -50,6 +51,26 @@ export default function App() {
       </section> */}
 
       <RequestForm />
+      <Testimonials />
+      <section className="discount-banner">
+        <div className="banner-bg-shape shape-1"></div>
+        <div className="banner-bg-shape shape-2"></div>
+
+        <div className="banner-content">
+          <h2 className="banner-heading">
+            We Offer 50% Discount On Every Order You Place.
+          </h2>
+          <p className="banner-subtext">
+            Hurry up, place your order, and get a free quote!
+          </p>
+          <button className="banner-btn-yellow">
+            Get your FREE qoute fast!
+          </button>
+          <p className="banner-footer-text">
+            Easy Registration / Guaranteed Confidentiality
+          </p>
+        </div>
+      </section>
     </>
   );
 }
