@@ -40,7 +40,7 @@ const MultiStepForm = () => {
                             </div>
                             <div className="form-group">
                                 <label>Phone Number*</label>
-                                <input type="text" className="form-input" placeholder="+1 (123) 456-7890" />
+                                <input type="text" className="form-input" placeholder="(123) 456-7890" />
                             </div>
                         </div>
 

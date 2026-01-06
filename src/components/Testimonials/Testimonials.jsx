@@ -4,7 +4,6 @@ import './Testimonials.css';
 const ReviewCard = ({ name, major, review, rating }) => {
     return (
         <div className="review-card">
-            {/* Header: Name aur Stars ek hi line mein */}
             <div className="review-header">
                 <div className="profile-circle">{name.charAt(0)}</div>
                 <div className="user-info">
@@ -17,9 +16,7 @@ const ReviewCard = ({ name, major, review, rating }) => {
             </div>
 
             <div className="review-content">
-                <span className="quote-icon-left">“</span>
                 <p className="review-text">{review}</p>
-                <span className="quote-icon-right">”</span>
             </div>
 
             <div className="review-footer">

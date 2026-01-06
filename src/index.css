@@ -435,3 +435,143 @@ body {
         width: 100%;
     }
 }
+
+
+/* Steps Section Wrapper */
+.steps-section {
+    position: relative;
+    padding: 100px 0;
+    background-color: #ffffff;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.steps-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.steps-content {
+    width: 55%;
+}
+
+.steps-main-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a237e;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.step-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.step-indicator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-number {
+    min-width: 35px;
+    height: 35px;
+    background-color: #1a237e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.step-line {
+    position: absolute;
+    left: 17px;
+    top: 35px;
+    width: 1px;
+    height: calc(100% + 15px);
+    background-color: black;
+}
+
+.step-text h4 {
+    margin: 0 0 10px 0;
+    color: #1a237e;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.step-text p {
+    margin: 0;
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 490px;
+}
+
+
+
+.talk-expert-btn {
+    background-color: #3d5afe;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+.steps-image-full-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.steps-img-render {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent 0%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+}
+
+@media (max-width: 992px) {
+    .steps-section {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    .steps-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .steps-image-full-side {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .steps-img-render {
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+}

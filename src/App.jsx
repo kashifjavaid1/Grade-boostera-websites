@@ -6,6 +6,7 @@ import tool_logo_2 from './assets/new_populi_logo-1.svg';
 import tool_logo_3 from './assets/BB-logo.webp';
 import tool_logo_4 from './assets/logo090-1.svg';
 import tool_logo_5 from './assets/images-1.svg';
+import setupsImage from './assets/setups-image.webp';
 
 import { FiPhoneCall } from "react-icons/fi";
 import './index.css';
@@ -75,6 +76,7 @@ export default function App() {
       </section>
       <Reviews />
       <Services />
+      {/* why choose Session */}
       <section className="why-choose-section">
         <h2 className="section-title">Why Choose Us</h2>
 
@@ -112,7 +114,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Gold Standard Promise Box */}
         <div className="gold-promise-box">
           <div className="promise-left">
             <h3>Our Gold Standard Promise</h3>
@@ -129,7 +130,60 @@ export default function App() {
       </section>
 
 
+      {/* { Steps Section} */}
+      <section className="steps-section">
+        <div className="steps-container">
+          <div className="steps-content">
+            <h2 className="steps-main-title">
+              3 Easy-Peasy Steps To Get Our <br />
+              Trusted Online Class Help Service
+            </h2>
 
+            <div className="steps-list">
+              <div className="step-item">
+                <div className="step-indicator-wrapper">
+                  <div className="step-number">1</div>
+                  <div className="step-line"></div>
+                </div>
+                <div className="step-text">
+                  <h4>Share Your Requirements</h4>
+                  <p>Fill out a quick form with all the nitty-gritty, topic, due date, word limit, and guidelines. We will then give the perfect solution for your academic requirements.</p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-indicator-wrapper">
+                  <div className="step-number">2</div>
+                  <div className="step-line"></div>
+                </div>
+                <div className="step-text">
+                  <h4>Quality Check by Subject-Specific Experts</h4>
+                  <p>Right after you place the order, our certified specialists put on their thinking caps, review every detail to ensure the work aligns perfectly with your syllabus.</p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-indicator-wrapper">
+                  <div className="step-number">3</div>
+                  <div className="step-line"></div>
+                </div>
+                <div className="step-text">
+                  <h4>Get Assigned A Certified Online Tutor</h4>
+                  <p>From there, our experts take the baton, delivering original, practical assignments that hit the bull’s eye for your online class demands.</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="talk-expert-btn">
+              Talk to expert
+            </button>
+          </div>
+        </div>
+
+        <div className="steps-image-full-side">
+          <img src={setupsImage} alt="Students Group" className="steps-img-render" />
+        </div>
+      </section>
 
 
     </>
