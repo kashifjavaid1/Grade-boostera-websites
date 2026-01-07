@@ -6,6 +6,7 @@ import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget.jsx';
 import Home from './pages/Home.jsx';
 import './index.css';
 import About from './pages/About.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-
+      <Footer />
     </Router>
   );
 }
