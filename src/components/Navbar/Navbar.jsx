@@ -3,7 +3,7 @@ import './Navbar.css';
 import logo from '../../assets/TakeMyOnline-logo.png';
 import { FiPhoneCall } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
-
+import { Link } from 'react-router-dom';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const openWhatsApp = () => {
@@ -17,10 +17,18 @@ function Navbar() {
         </div>
         <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
           <ul className="navbar-links">
-            <li><a href="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="/about" className="nav-link" onClick={() => setIsOpen(false)}>About</a></li>
-            <li><a href="/subject" className="nav-link" onClick={() => setIsOpen(false)}>Subject</a></li>
-            <li><a href="/contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact Us</a></li>
+            <li>
+              <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>Home</Link>
+            </li>
+            <li>
+              <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>About</Link>
+            </li>
+            <li>
+              <Link to="/subject" className="nav-link" onClick={() => setIsOpen(false)}>Subject</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact Us</Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-right-side">
