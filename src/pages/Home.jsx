@@ -7,6 +7,7 @@ import RequestForm from '../components/RequestForm/RequestForm.jsx';
 import Testimonials from '../components/Testimonials/Testimonials.jsx';
 import Reviews from '../components/Reviews/Reviews.jsx';
 import Services from '../components/Services/Services.jsx';
+import Faq from '../components/FAQ/FAQ.jsx';
 
 const Home = () => {
     return (
@@ -167,6 +168,7 @@ const Home = () => {
                     <img src={setupsImage} alt="Students Group" className="steps-img-render" />
                 </div>
             </section>
+            <Faq />
         </>
     );
 };
