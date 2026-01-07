@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import './index.css';
 import About from './pages/About.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import SubjectPage from './pages/Subject.jsx';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/subject" element={<SubjectPage />} />
       </Routes>
       <Footer />
     </Router>
