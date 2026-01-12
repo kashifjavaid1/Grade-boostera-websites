@@ -1,6 +1,6 @@
-.request-form-main-container {
+/* .request-form-main-container {
     padding-top: 40px;
-}
+} */
 
 .request-form-card {
     background: #ffffff;
@@ -10,6 +10,7 @@
     max-width: 1240px;
     margin: 20px auto;
     border: 1px solid #f0f0f0;
+    height: 450px;
 }
 
 .request-form-heading {

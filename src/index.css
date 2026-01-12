@@ -212,7 +212,9 @@ body {
 }
 
 
-
+.discount-container {
+    margin-top: 60px;
+}
 
 .discount-banner {
     background-color: #161a61;

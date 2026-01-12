@@ -31,32 +31,15 @@ const Home = () => {
                     </div>
 
                     <div className="hero-right">
-                        <img src={heroGirl} alt="Student" className="hero-image" />
+                        {/* <img src={heroGirl} alt="Student" className="hero-image" /> */}
+                        <RequestForm />
                     </div>
                 </div>
             </section>
 
-            <RequestForm />
-            <Testimonials />
-            <section className="discount-banner">
-                <div className="banner-bg-shape shape-1"></div>
-                <div className="banner-bg-shape shape-2"></div>
 
-                <div className="banner-content">
-                    <h2 className="banner-heading">
-                        We Offer 50% Discount On Every Order You Place.
-                    </h2>
-                    <p className="banner-subtext">
-                        Hurry up, place your order, and get a free quote!
-                    </p>
-                    <button className="banner-btn-yellow">
-                        Get your FREE qoute fast!
-                    </button>
-                    <p className="banner-footer-text">
-                        Easy Registration / Guaranteed Confidentiality
-                    </p>
-                </div>
-            </section>
+            <Testimonials />
+
 
             <Reviews />
             <Services />
@@ -168,6 +151,28 @@ const Home = () => {
                     <img src={setupsImage} alt="Students Group" className="steps-img-render" />
                 </div>
             </section>
+
+            <div className='discount-container'>
+                <section className="discount-banner">
+                    <div className="banner-bg-shape shape-1"></div>
+                    <div className="banner-bg-shape shape-2"></div>
+
+                    <div className="banner-content">
+                        <h2 className="banner-heading">
+                            We Offer 50% Discount On Every Order You Place.
+                        </h2>
+                        <p className="banner-subtext">
+                            Hurry up, place your order, and get a free quote!
+                        </p>
+                        <button className="banner-btn-yellow">
+                            Get your FREE qoute fast!
+                        </button>
+                        <p className="banner-footer-text">
+                            Easy Registration / Guaranteed Confidentiality
+                        </p>
+                    </div>
+                </section>
+            </div>
             <Faq />
         </>
     );

@@ -6,7 +6,7 @@ const MultiStepForm = () => {
 
     return (
         <div className='request-form-main-container'>
-            <h3 className='request-form-heading'>Request Academic Assistance</h3>
+            {/* <h3 className='request-form-heading'>Request Academic Assistance</h3> */}
             <div className="request-form-card">
                 {step === 1 ? (
                     <>
