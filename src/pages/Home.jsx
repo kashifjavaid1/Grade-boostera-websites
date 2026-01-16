@@ -10,6 +10,9 @@ import Services from '../components/Services/Services.jsx';
 import Faq from '../components/FAQ/FAQ.jsx';
 
 const Home = () => {
+    const openWhatsApp = () => {
+        window.open("https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class.", "_blank");
+    };
     return (
         <>
             <section className="hero-section">
@@ -31,13 +34,13 @@ const Home = () => {
                     </div>
 
                     <div className="hero-right">
-                        {/* <img src={heroGirl} alt="Student" className="hero-image" /> */}
-                        <RequestForm />
+                        <img src={heroGirl} alt="Student" className="hero-image" />
+
                     </div>
                 </div>
             </section>
 
-
+            <RequestForm />
             <Testimonials />
 
 
@@ -86,6 +89,10 @@ const Home = () => {
                     <div className="promise-left">
                         <h3>Our Gold Standard Promise</h3>
                         <p>EDUOriginals is committed to maintaining the highest standards of academic integrity and excellence. We believe in empowering students with quality assistance that helps them succeed.</p>
+
+                        <button className="quote-btn" onClick={openWhatsApp}>
+                            Get a Quote
+                        </button>
                     </div>
                     <div className="promise-right">
                         <ul>
@@ -141,8 +148,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <button className="talk-expert-btn">
-                            Talk to expert
+                        <button className="quote-btn quote-button" onClick={openWhatsApp}>
+                            Get a Quote
                         </button>
                     </div>
                 </div>

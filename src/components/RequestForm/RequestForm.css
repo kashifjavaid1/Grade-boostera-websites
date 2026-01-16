@@ -10,7 +10,7 @@
     max-width: 1240px;
     margin: 20px auto;
     border: 1px solid #f0f0f0;
-    height: 450px;
+    height: auto;
 }
 
 .request-form-heading {

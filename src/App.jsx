@@ -8,6 +8,7 @@ import './index.css';
 import About from './pages/About.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import SubjectPage from './pages/Subject.jsx';
+import ContactUs from './pages/ContactUs.jsx';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/subject" element={<SubjectPage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </Router>
