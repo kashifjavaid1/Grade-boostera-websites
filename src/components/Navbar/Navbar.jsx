@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/TakeMyOnline-logo.png';
+import logo from '../../assets/Grade Booster PNG file.png';
 import { FiPhoneCall } from "react-icons/fi";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
