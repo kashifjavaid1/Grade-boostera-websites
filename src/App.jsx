@@ -9,6 +9,7 @@ import About from './pages/About.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import SubjectPage from './pages/Subject.jsx';
 import ContactUs from './pages/ContactUs.jsx';
+import AuthForm from './components/AuthForm/AuthForm.jsx';
 
 export default function App() {
   return (
@@ -20,6 +21,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/subject" element={<SubjectPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/login" element={<AuthForm initialMode="login" />} />
+        <Route path="/register" element={<AuthForm initialMode="register" />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,0 +1,113 @@
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #fdfdfd;
+}
+
+.auth-glass-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 45px 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(43, 57, 144, 0.08);
+    /* Soft Blue shadow */
+    border: 1px solid #f0f0f0;
+}
+
+.auth-header h2 {
+    color: #2b3990;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.auth-header p {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-box .icon {
+    position: absolute;
+    left: 16px;
+    color: #f1a817;
+    /* Yellow from your buttons */
+    font-size: 18px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px 14px 14px 48px;
+    background: #f9fafb;
+    border: 1.5px solid #eee;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #f1a817;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(241, 168, 23, 0.1);
+}
+
+.submit-btn {
+    background: #2b3990;
+    /* Blue color from image_d5fa3d */
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1e2866;
+    transform: translateY(-2px);
+}
+
+
+/* Entry Animation */
+.animate-slide {
+    animation: fadeInSlide 0.4s ease-out;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
