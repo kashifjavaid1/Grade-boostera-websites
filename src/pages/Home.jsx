@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import heroGirl from '../assets/take-online-class.webp';
 import setupsImage from '../assets/setups-image.webp';
 import { FiPhoneCall } from "react-icons/fi";
-
 import RequestForm from '../components/RequestForm/RequestForm.jsx';
 import Testimonials from '../components/Testimonials/Testimonials.jsx';
 import Reviews from '../components/Reviews/Reviews.jsx';
 import Services from '../components/Services/Services.jsx';
 import Faq from '../components/FAQ/FAQ.jsx';
+import QuoteForm from '../components/QuoteForm/QuoteForm.jsx';
 
 const Home = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const openWhatsApp = () => {
         window.open("https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class.", "_blank");
     };
@@ -29,7 +30,9 @@ const Home = () => {
                             <button className="btn-talk">
                                 <FiPhoneCall className="btn-icon" /> Talk to expert
                             </button>
-                            <button className="btn-quote">Get A Quote</button>
+                            <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
+                                Get a Quote
+                            </button>
                         </div>
                     </div>
 
@@ -42,8 +45,6 @@ const Home = () => {
 
             <RequestForm />
             <Testimonials />
-
-
             <Reviews />
             <Services />
 
@@ -90,7 +91,7 @@ const Home = () => {
                         <h3>Our Gold Standard Promise</h3>
                         <p>EDUOriginals is committed to maintaining the highest standards of academic integrity and excellence. We believe in empowering students with quality assistance that helps them succeed.</p>
 
-                        <button className="quote-btn" onClick={openWhatsApp}>
+                        <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
                             Get a Quote
                         </button>
                     </div>
@@ -148,7 +149,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <button className="quote-btn quote-button" onClick={openWhatsApp}>
+                        <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
                             Get a Quote
                         </button>
                     </div>
@@ -181,6 +182,14 @@ const Home = () => {
                 </section>
             </div>
             <Faq />
+
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <QuoteForm />
+                    </div>
+                </div>
+            )}
         </>
     );
 };
