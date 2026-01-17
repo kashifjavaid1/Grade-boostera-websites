@@ -36,13 +36,11 @@
     gap: 35px;
 }
 
-/* 1. Generic anchors se pehle shapes hatayein */
 a::before,
 a:hover::before {
     display: none;
 }
 
-/* 2. Sirf Navigation Links par design apply karein */
 .nav-link {
     text-decoration: none;
     color: #333333;
