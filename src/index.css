@@ -1344,3 +1344,104 @@ body {
         padding: 10px;
     }
 }
+
+
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 230px;
+    background: #001529;
+    color: white;
+    padding: 25px;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.sidebar nav a,
+.sidebar .logout {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+    background: #1890ff;
+}
+
+.logout {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #fafafa;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.request-form {
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.request-form button {
+    background: #1890ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+}

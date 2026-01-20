@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './AuthForm.css';
 import { HiMail, HiLockClosed, HiUser } from "react-icons/hi";
+import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { useNavigate } from "react-router-dom";
 
 const AuthForm = ({ initialMode = 'login' }) => {
     const [isLogin, setIsLogin] = useState(initialMode === 'login');
     const [formData, setFormData] = useState({
         firstName: '', lastName: '', email: '', password: ''
     });
+    const navigate = useNavigate();
 
     const toggleMode = () => setIsLogin(!isLogin);
 
@@ -14,11 +20,40 @@ const AuthForm = ({ initialMode = 'login' }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Submit Data to MongoDB:", formData);
-        // Yahan aapka axios.post ya fetch logic aayega
+
+        try {
+            const url = isLogin
+                ? "http://localhost:5000/api/auth/login"
+                : "http://localhost:5000/api/auth/register";
+
+            const payload = isLogin
+                ? { email: formData.email, password: formData.password }
+                : formData;
+
+            const res = await axios.post(url, payload, {
+                withCredentials: true
+            });
+
+            if (isLogin) {
+                localStorage.setItem("user", JSON.stringify(res.data));
+                toast.success("Login successful 🎉");
+
+                setTimeout(() => {
+                    window.location.href = "/dashboard";
+                }, 800);
+            } else {
+                toast.success("Account created successfully 🚀");
+                setIsLogin(true);
+            }
+
+        } catch (err) {
+            const msg = err.response?.data?.message || "Something went wrong";
+            toast.error(msg);
+        }
     };
+
 
     return (
         <div className="auth-wrapper">
