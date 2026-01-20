@@ -27,7 +27,6 @@ function Navbar() {
               <li><Link to="/subject" className="nav-link" onClick={() => setIsOpen(false)}>Subject</Link></li>
               <li><Link to="/contact-us" className="nav-link" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
 
-              {/* Admin Link added here */}
               <li>
                 <Link to="/login" className="nav-link admin-link" onClick={() => setIsOpen(false)}>
                   <HiLockClosed style={{ marginRight: '5px' }} /> Admin
@@ -41,8 +40,7 @@ function Navbar() {
               Get a Quote
             </button>
 
-            {/* Link use kar sakte hain ya simple div, phone ke liye tel: protocol best hai refresh nahi karta */}
-            <a href="tel:03481005573" className="phone-desktop-only">
+            <a href="https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class." target="_blank" className="phone-desktop-only">
               <div className="phone-container">
                 <span className="phone-icon"><FiPhoneCall /></span>
                 <span className="phone">03481005573</span>
@@ -59,7 +57,6 @@ function Navbar() {
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal" onClick={() => setIsModalOpen(false)}>×</button>
             <QuoteForm />
           </div>
         </div>
