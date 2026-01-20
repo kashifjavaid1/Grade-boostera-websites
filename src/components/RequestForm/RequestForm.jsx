@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const MultiStepForm = () => {
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
-
+    const [file, setFile] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         subjectArea: 'Mathematics',
         assignmentType: 'Homework',
@@ -29,16 +30,42 @@ const MultiStepForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (!formData.studentName || !formData.phoneNumber) {
+            return toast.warn("Please fill required fields");
+        }
+
+        setLoading(true);
+        const data = new FormData();
+
+        if (file) {
+            data.append("file", file);
+        }
+
+        data.append("subjectArea", formData.subjectArea);
+        data.append("assignmentType", formData.assignmentType);
+        data.append("studentName", formData.studentName);
+        data.append("phoneNumber", formData.phoneNumber);
+        data.append("deadline", formData.deadline);
+        data.append("wordCount", formData.wordCount || "");
+        data.append("academicLevel", formData.academicLevel);
+        data.append("citationStyle", formData.citationStyle || "");
+        data.append("fileFormat", formData.fileFormat || "");
+        data.append("instructions", formData.instructions || "");
+
         try {
-            const res = await axios.post("http://localhost:5000/api/requests/create", formData);
+            const res = await axios.post("http://localhost:5000/api/requests/create", data, {
+                headers: { "Content-Type": "multipart/form-data" }
+            });
 
             if (res.data.success) {
-                toast.success("Request Submitted Successfully! 🎉");
+                toast.success("Submitted Successfully! 🎉");
                 navigate("/");
             }
         } catch (err) {
-            toast.error(err.response?.data?.message || "Submission failed");
             console.log(err);
+            toast.error(err.response?.data?.message || "Submission failed");
+        } finally {
+            setLoading(false); // 3. Loader stop (Success ho ya Error)
         }
     };
 
@@ -215,11 +242,39 @@ const MultiStepForm = () => {
 
                         <div className="upload-container">
                             <label className="upload-label">Attach Files (Optional)</label>
-                            <div className="upload-box">
-                                <div className="upload-icon-cloud">☁️</div>
-                                <p>Click to upload or <strong>drag and drop</strong></p>
-                                <span>PDF, Word, Excel, PowerPoint, etc.</span>
-                                <input type="file" className="file-input-hidden" multiple />
+                            <div className="upload-box" onClick={() => document.getElementById('fileInput').click()}>
+                                <div className="upload-icon-cloud">
+                                    {file ? '📄' : '☁️'}
+                                </div>
+
+                                {file ? (
+                                    <div className="file-info">
+                                        <p style={{ color: '#2ecc71', fontWeight: 'bold' }}>Selected: {file.name}</p>
+                                        <span style={{ fontSize: '12px', color: '#666' }}>
+                                            {(file.size / 1024).toFixed(2)} KB
+                                        </span>
+                                        <button
+                                            type="button"
+                                            onClick={(e) => { e.stopPropagation(); setFile(null); }}
+                                            style={{ marginLeft: '10px', color: 'red', border: 'none', background: 'none', cursor: 'pointer' }}
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <p>Click to upload or <strong>drag and drop</strong></p>
+                                        <span>PDF, Word, Excel, PowerPoint, etc.</span>
+                                    </>
+                                )}
+
+                                <input
+                                    id="fileInput"
+                                    type="file"
+                                    onChange={(e) => setFile(e.target.files[0])}
+                                    className="file-input-hidden"
+                                    style={{ display: 'none' }}
+                                />
                             </div>
                         </div>
 
@@ -229,9 +284,14 @@ const MultiStepForm = () => {
                                 type="button"
                                 className="continue-btn submit-btn"
                                 onClick={handleSubmit}
+                                disabled={loading}
                             >
-                                Submit Request
+                                {loading ? (
+                                    <span class="loader"></span>
+                                ) : null}
+                                {loading ? "Submitting..." : "Submit Request"}
                             </button>
+
                         </div>
 
                         <div className="confidential-bottom">
