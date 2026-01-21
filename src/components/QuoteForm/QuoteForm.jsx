@@ -9,7 +9,7 @@ const QuoteForm = ({ onClose }) => {
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
     const [loading, setLoading] = useState(false);
-
+    const today = new Date().toISOString().split('T')[0];
     const [file, setFile] = useState(null);
 
     const [formData, setFormData] = useState({
@@ -118,7 +118,17 @@ const QuoteForm = ({ onClose }) => {
                         <div className="form-step-view">
                             <h4 className="section-heading">Details & Deadline</h4>
                             <div className="input-grid">
-                                <div className="quote-inpute"><label>DEADLINE*</label><input name="deadline" type="date" className="field" value={formData.deadline} onChange={handleChange} /></div>
+                                <div className="quote-inpute"><label>DEADLINE*</label>
+                                    <input
+                                        type="date"
+                                        name="deadline"
+                                        min={today}
+                                        value={formData.deadline}
+                                        onChange={handleChange}
+                                        className="form-input custom-datepicker"
+                                    />
+
+                                </div>
                                 <div className="quote-inpute"><label>ACADEMIC LEVEL*</label>
                                     <select name="academicLevel" className="field" onChange={handleChange} value={formData.academicLevel}>
                                         <option value="">Select Level</option>

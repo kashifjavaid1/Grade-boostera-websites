@@ -9,6 +9,7 @@ const MultiStepForm = () => {
     const [step, setStep] = useState(1);
     const [file, setFile] = useState(null);
     const [loading, setLoading] = useState(false);
+    const today = new Date().toISOString().split('T')[0];
     const [formData, setFormData] = useState({
         subjectArea: 'Mathematics',
         assignmentType: 'Homework',
@@ -162,9 +163,10 @@ const MultiStepForm = () => {
                                 <input
                                     type="date"
                                     name="deadline"
+                                    min={today}
                                     value={formData.deadline}
                                     onChange={handleChange}
-                                    className="form-input"
+                                    className="form-input custom-datepicker"
                                 />
                             </div>
 
