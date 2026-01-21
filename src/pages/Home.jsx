@@ -27,7 +27,7 @@ const Home = () => {
                             TakeMyOnlineClassUS is a leading platform that offers to handle student’s online classes with proficiency. Busy students frequently seeking assistance and ask “Can I pay someone to take my online class”, we are here to exactly resolve your query. We have designed our services to lighten the burden and ensure guaranteed academic success.
                         </p>
                         <div className="hero-buttons">
-                            <button className="btn-talk">
+                            <button className="btn-talk" onClick={openWhatsApp}>
                                 <FiPhoneCall className="btn-icon" /> Talk to expert
                             </button>
                             <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
@@ -184,11 +184,7 @@ const Home = () => {
             <Faq />
 
             {isModalOpen && (
-                <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <QuoteForm />
-                    </div>
-                </div>
+                <QuoteForm onClose={() => setIsModalOpen(false)} />
             )}
         </>
     );

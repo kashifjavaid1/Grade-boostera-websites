@@ -9,7 +9,9 @@ import QuoteForm from '../QuoteForm/QuoteForm';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const openWhatsApp = () => {
+    window.open("https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class.", "_blank");
+  };
   return (
     <>
       <nav className="navbar">
@@ -36,16 +38,15 @@ function Navbar() {
           </div>
 
           <div className="navbar-right-side">
-            <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
+            <button className="quote-btn" onClick={() => setIsModalOpen(true)} >
               Get a Quote
             </button>
 
-            <a href="https://api.whatsapp.com/send/?phone=923481005573&text=Hi, I need help with my online class." target="_blank" className="phone-desktop-only">
-              <div className="phone-container">
-                <span className="phone-icon"><FiPhoneCall /></span>
-                <span className="phone">03481005573</span>
-              </div>
-            </a>
+
+            <div className="phone-container" onClick={openWhatsApp}>
+              <span className="phone-icon"><FiPhoneCall /></span>
+              <span className="phone">03030300303</span>
+            </div>
 
             <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <HiX /> : <HiMenu />}
@@ -55,11 +56,7 @@ function Navbar() {
       </nav>
 
       {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <QuoteForm />
-          </div>
-        </div>
+        <QuoteForm onClose={() => setIsModalOpen(false)} />
       )}
     </>
   );

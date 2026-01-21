@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Reviews.css';
+import QuoteForm from '../QuoteForm/QuoteForm';
 
 const Reviews = () => {
     const scrollRef = useRef(null);
+    const [openQuote, setOpenQuote] = useState(false);
 
-    // Data Array: Jitne marzi experts add karein
     const expertsData = [
         {
             id: 1,
@@ -58,38 +59,44 @@ const Reviews = () => {
     };
 
     return (
-        <section className="reviews-section">
-            <h2 className="reviews-title">Certified Professionals For Every Subject</h2>
-            <p className="reviews-subtitle">Our certified professionals cover every little detail in our online classes.</p>
+        <>
+            <section className="reviews-section">
+                <h2 className="reviews-title">Certified Professionals For Every Subject</h2>
+                <p className="reviews-subtitle">Our certified professionals cover every little detail in our online classes.</p>
 
-            <div className="slider-wrapper">
-                <button className="slide-arrow left-arrow" onClick={() => scroll('left')}>❮</button>
+                <div className="slider-wrapper">
+                    <button className="slide-arrow left-arrow" onClick={() => scroll('left')}>❮</button>
 
-                <div className="reviews-slider" ref={scrollRef}>
-                    {expertsData.map((expert) => (
-                        <div className="expert-card" key={expert.id}>
-                            <div className="expert-header">
-                                <img src={expert.img} alt={expert.name} className="expert-avatar" />
-                                <div className="expert-meta">
-                                    <h4>{expert.name}</h4>
-                                    <div className="expert-stars">
-                                        <span>★★★★★</span>
-                                        <span className="review-count">{expert.reviews} Reviews</span>
+                    <div className="reviews-slider" ref={scrollRef}>
+                        {expertsData.map((expert) => (
+                            <div className="expert-card" key={expert.id}>
+                                <div className="expert-header">
+                                    <img src={expert.img} alt={expert.name} className="expert-avatar" />
+                                    <div className="expert-meta">
+                                        <h4>{expert.name}</h4>
+                                        <div className="expert-stars">
+                                            <span>★★★★★</span>
+                                            <span className="review-count">{expert.reviews} Reviews</span>
+                                        </div>
                                     </div>
                                 </div>
+                                <p className="expert-body">
+                                    <strong>{expert.orders} Completed Orders</strong> {expert.description}
+                                </p>
+                                <button className="hire-now-btn" onClick={() => setOpenQuote(true)}>Hire Now</button>
                             </div>
-                            <p className="expert-body">
-                                <strong>{expert.orders} Completed Orders</strong> {expert.description}
-                            </p>
-                            <button className="hire-now-btn">Hire Now</button>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
 
-                <button className="slide-arrow right-arrow" onClick={() => scroll('right')}>❯</button>
-            </div>
-        </section>
+                    <button className="slide-arrow right-arrow" onClick={() => scroll('right')}>❯</button>
+                </div>
+            </section>
+
+
+            {openQuote && <QuoteForm onClose={() => setOpenQuote(false)} />}
+        </>
     );
+
 };
 
 export default Reviews;

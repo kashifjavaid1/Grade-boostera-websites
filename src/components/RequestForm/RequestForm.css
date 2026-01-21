@@ -257,6 +257,11 @@ textarea.form-input {
         gap: 20px;
         text-align: center;
     }
+
+    .request-form-card {
+        margin: 0px 20px;
+
+    }
 }
 
 

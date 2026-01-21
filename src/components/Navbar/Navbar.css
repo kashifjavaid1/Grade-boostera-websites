@@ -96,6 +96,7 @@ a:hover::before {
 
 .quote-btn:hover {
     background-color: #4461f2;
+    cursor: pointer;
 }
 
 .phone-desktop-only {
@@ -110,6 +111,7 @@ a:hover::before {
     padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .phone {
@@ -150,6 +152,7 @@ a:hover::before {
     .quote-btn {
         padding: 10px 15px;
         font-size: 13px;
+        cursor: pointer;
     }
 
     .navbar-menu {
