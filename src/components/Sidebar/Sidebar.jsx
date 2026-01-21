@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from '../../assets/Grade Booster PNG file.png';
 
 const Sidebar = () => {
     const handleLogout = () => {
@@ -8,7 +9,11 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <h2 className="logo">G3 Admin</h2>
+            <div className="navbar-logo">
+                <Link to="/">
+                    <img src={logo} alt="Grade Booster Logo" />
+                </Link>
+            </div>
             <nav>
                 <Link to="/dashboard">Dashboard</Link>
                 <Link to="/request">New Request</Link>
