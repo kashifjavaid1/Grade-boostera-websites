@@ -9,8 +9,8 @@ const QuoteForm = ({ onClose }) => {
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
     const [loading, setLoading] = useState(false);
-    const today = new Date().toISOString().split('T')[0];
     const [file, setFile] = useState(null);
+    const today = new Date().toISOString().split('T')[0];
 
     const [formData, setFormData] = useState({
         subjectArea: 'Mathematics',
@@ -30,10 +30,29 @@ const QuoteForm = ({ onClose }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleNext = () => {
+        if (step === 1) {
+            if (!formData.subjectArea || !formData.assignmentType) {
+                return toast.warn("Please select subject and assignment type");
+            }
+        } else if (step === 2) {
+            if (!formData.deadline) {
+                return toast.warn("Please select a deadline");
+            }
+            if (!formData.academicLevel) {
+                return toast.warn("Please select your academic level");
+            }
+        } else if (step === 4) {
+            if (!formData.studentName.trim() || !formData.phoneNumber.trim()) {
+                return toast.warn("Name and Phone are required");
+            }
+        }
+        setStep(step + 1);
+    };
 
-        if (!formData.studentName || !formData.phoneNumber) {
-            return toast.warn("Please fill required fields");
+    const handleSubmit = async () => {
+        if (!formData.instructions.trim()) {
+            return toast.warn("Please provide some instructions");
         }
 
         setLoading(true);
@@ -43,16 +62,9 @@ const QuoteForm = ({ onClose }) => {
             data.append("file", file);
         }
 
-        data.append("subjectArea", formData.subjectArea);
-        data.append("assignmentType", formData.assignmentType);
-        data.append("studentName", formData.studentName);
-        data.append("phoneNumber", formData.phoneNumber);
-        data.append("deadline", formData.deadline);
-        data.append("wordCount", formData.wordCount || "");
-        data.append("academicLevel", formData.academicLevel);
-        data.append("citationStyle", formData.citationStyle || "");
-        data.append("fileFormat", formData.fileFormat || "");
-        data.append("instructions", formData.instructions || "");
+        Object.entries(formData).forEach(([key, value]) => {
+            data.append(key, value || "");
+        });
 
         try {
             const res = await axios.post("http://localhost:5000/api/requests/create", data, {
@@ -61,16 +73,32 @@ const QuoteForm = ({ onClose }) => {
 
             if (res.data.success) {
                 toast.success("Submitted Successfully! 🎉");
+
+                setFormData({
+                    subjectArea: 'Mathematics',
+                    assignmentType: 'Homework',
+                    studentName: '',
+                    phoneNumber: '',
+                    deadline: '',
+                    wordCount: '',
+                    academicLevel: '',
+                    citationStyle: '',
+                    fileFormat: '',
+                    instructions: ''
+                });
+                setFile(null);
+                setStep(1);
+
+                onClose();
                 navigate("/");
             }
         } catch (err) {
-            console.log(err);
+            console.error(err);
             toast.error(err.response?.data?.message || "Submission failed");
         } finally {
             setLoading(false);
         }
     };
-
 
     return (
         <div className="quote-container-wrapper">
@@ -118,25 +146,29 @@ const QuoteForm = ({ onClose }) => {
                         <div className="form-step-view">
                             <h4 className="section-heading">Details & Deadline</h4>
                             <div className="input-grid">
-                                <div className="quote-inpute"><label>DEADLINE*</label>
+                                <div className="quote-inpute">
+                                    <label>DEADLINE*</label>
                                     <input
                                         type="date"
                                         name="deadline"
                                         min={today}
                                         value={formData.deadline}
                                         onChange={handleChange}
-                                        className="form-input custom-datepicker"
+                                        className="field"
                                     />
-
                                 </div>
-                                <div className="quote-inpute"><label>ACADEMIC LEVEL*</label>
+                                <div className="quote-inpute">
+                                    <label>ACADEMIC LEVEL*</label>
                                     <select name="academicLevel" className="field" onChange={handleChange} value={formData.academicLevel}>
                                         <option value="">Select Level</option>
                                         <option value="Undergraduate">Undergraduate</option>
                                         <option value="Masters">Masters</option>
                                     </select>
                                 </div>
-                                <div className="quote-inpute full-span"><label>WORD COUNT</label><input name="wordCount" type="text" className="field" placeholder="e.g. 1500" value={formData.wordCount} onChange={handleChange} /></div>
+                                <div className="quote-inpute full-span">
+                                    <label>WORD COUNT</label>
+                                    <input name="wordCount" type="text" className="field" placeholder="e.g. 1500" value={formData.wordCount} onChange={handleChange} />
+                                </div>
                             </div>
                         </div>
                     )}
@@ -145,14 +177,16 @@ const QuoteForm = ({ onClose }) => {
                         <div className="form-step-view">
                             <h4 className="section-heading">Formatting</h4>
                             <div className="input-grid">
-                                <div className="quote-inpute"><label>CITATION STYLE</label>
+                                <div className="quote-inpute">
+                                    <label>CITATION STYLE</label>
                                     <select name="citationStyle" className="field" value={formData.citationStyle} onChange={handleChange}>
                                         <option value="">Select style</option>
                                         <option value="APA">APA</option>
                                         <option value="MLA">MLA</option>
                                     </select>
                                 </div>
-                                <div className="quote-inpute"><label>FILE FORMAT</label>
+                                <div className="quote-inpute">
+                                    <label>FILE FORMAT</label>
                                     <select name="fileFormat" className="field" value={formData.fileFormat} onChange={handleChange}>
                                         <option value="">Select format</option>
                                         <option value=".docx">.docx</option>
@@ -167,8 +201,14 @@ const QuoteForm = ({ onClose }) => {
                         <div className="form-step-view">
                             <h4 className="section-heading">Contact Info</h4>
                             <div className="input-grid">
-                                <div className="quote-inpute full-span"><label>FULL NAME*</label><input name="studentName" type="text" className="field" placeholder="John Smith" value={formData.studentName} onChange={handleChange} /></div>
-                                <div className="quote-inpute full-span"><label>PHONE*</label><input name="phoneNumber" type="text" className="field" placeholder="(123) 456-7890" value={formData.phoneNumber} onChange={handleChange} /></div>
+                                <div className="quote-inpute full-span">
+                                    <label>FULL NAME*</label>
+                                    <input name="studentName" type="text" className="field" placeholder="John Smith" value={formData.studentName} onChange={handleChange} />
+                                </div>
+                                <div className="quote-inpute full-span">
+                                    <label>PHONE*</label>
+                                    <input name="phoneNumber" type="text" className="field" placeholder="(123) 456-7890" value={formData.phoneNumber} onChange={handleChange} />
+                                </div>
                             </div>
                         </div>
                     )}
@@ -177,7 +217,7 @@ const QuoteForm = ({ onClose }) => {
                         <div className="form-step-view">
                             <h4 className="section-heading">Upload & Instructions</h4>
                             <div className="quote-inpute full-span">
-                                <label>INSTRUCTIONS</label>
+                                <label>INSTRUCTIONS*</label>
                                 <textarea name="instructions" className="field textarea" placeholder="Details..." value={formData.instructions} onChange={handleChange}></textarea>
                             </div>
                             <div className="upload-container" onClick={() => document.getElementById('file-upload').click()}>
@@ -201,11 +241,9 @@ const QuoteForm = ({ onClose }) => {
                     <button
                         className="btn-next"
                         disabled={loading}
-                        onClick={() => step < 5 ? setStep(step + 1) : handleSubmit()}
+                        onClick={() => step < 5 ? handleNext() : handleSubmit()}
                     >
-                        {loading ? (
-                            <span class="loader"></span>
-                        ) : (step === 5 ? "Send Request" : "Next →")}
+                        {loading ? "Submitting..." : (step === 5 ? "Send Request" : "Next →")}
                     </button>
                 </div>
             </div>
