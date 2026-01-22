@@ -30,7 +30,7 @@ export default function App() {
                 <Route path="/subject" element={<SubjectPage />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/login" element={<AuthForm initialMode="login" />} />
-                <Route path="/register" element={<AuthForm initialMode="register" />} />
+                <Route path="/admin-access-setup-99" element={<AuthForm initialMode="register" />} />
                 <Route path="*" element={<Navigate to="/login" />} />
               </Routes>
               <Footer />
