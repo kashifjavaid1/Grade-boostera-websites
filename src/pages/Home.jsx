@@ -172,7 +172,7 @@ const Home = () => {
                         <p className="banner-subtext">
                             Hurry up, place your order, and get a free quote!
                         </p>
-                        <button className="banner-btn-yellow">
+                        <button className="banner-btn-yellow" onClick={() => setIsModalOpen(true)}>
                             Get your FREE qoute fast!
                         </button>
                         <p className="banner-footer-text">
