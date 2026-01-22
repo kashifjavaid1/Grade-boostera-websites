@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import './footer.css';
-
+import logo from '../../assets/Grade Booster PNG file.png';
 const Footer = () => {
     const quickLinks = [
         { name: "Home", path: "/" },
@@ -21,9 +21,11 @@ const Footer = () => {
 
                     <div className="footer-col brand-col">
                         <div className="footer-logo-box">
-                            <span className="logo-take-my">Take MY</span>
-                            <div className="logo-main-text">
-                                <span className="logo-n">n</span>line <span className="logo-class">ClassUS</span>
+                            <div className="logo-container">
+                                <span className="logo-take-my">Grade</span>
+                                <div className="logo-main-text">
+                                    <span className="logo-n">B</span>ooster
+                                </div>
                             </div>
                         </div>
                         <p className="footer-desc">
