@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import './faq.css';
+import './Faq.css';
 
 const FAQ_DATA = [
     {

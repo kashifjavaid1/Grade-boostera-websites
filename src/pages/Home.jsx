@@ -6,8 +6,8 @@ import RequestForm from '../components/RequestForm/RequestForm.jsx';
 import Testimonials from '../components/Testimonials/Testimonials.jsx';
 import Reviews from '../components/Reviews/Reviews.jsx';
 import Services from '../components/Services/Services.jsx';
-import Faq from '../components/FAQ/FAQ.jsx';
 import QuoteForm from '../components/QuoteForm/QuoteForm.jsx';
+import Faq from '../components/Faq/Faq.jsx';
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
