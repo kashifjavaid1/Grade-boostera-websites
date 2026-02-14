@@ -20,18 +20,17 @@ const Home = () => {
                 <div className="hero-container">
                     <div className="hero-left">
                         <h1 className="hero-title">
-                            Take My Online Class <br />
-                            for Me with <span className="highlight">Distinction Grades</span>
+                            Is It Possible to Hire Someone to Take My Online Class? Absolutely And We Guarantee the Grades.
                         </h1>
                         <p className="hero-description">
-                            TakeMyOnlineClassUS is a leading platform that offers to handle student’s online classes with proficiency. Busy students frequently seeking assistance and ask “Can I pay someone to take my online class”, we are here to exactly resolve your query. We have designed our services to lighten the burden and ensure guaranteed academic success.
+                            Overwhelmed with deadlines, exams, and endless assignments? You’re not alone. Thousands of students trust GradeBooster to handle their online classes from start to finish. Our subject-matter experts take care of every assignment, quiz, discussion, and exam, so you can focus on what matters most. Confidential, affordable, and backed by a money-back guarantee.
                         </p>
                         <div className="hero-buttons">
                             <button className="btn-talk" onClick={openWhatsApp}>
-                                <FiPhoneCall className="btn-icon" /> Talk to expert
+                                <FiPhoneCall className="btn-icon" /> Talk to an Expert
                             </button>
                             <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
-                                Get a Quote
+                                Get a Free Quote
                             </button>
                         </div>
                     </div>

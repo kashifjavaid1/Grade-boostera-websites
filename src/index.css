@@ -34,21 +34,18 @@ body {
 }
 
 .hero-title {
-    font-size: 58px;
+    font-size: 37px;
     font-weight: 800;
     line-height: 1.1;
-    color: #14125C;
+    color: #152d42;
     margin-bottom: 25px;
 }
 
-.highlight {
-    color: #14125C;
-}
 
 .hero-description {
     font-size: 19px;
     font-weight: 400;
-    color: #333;
+    color: #44546a;
     margin-bottom: 35px;
     line-height: 1.6;
 }

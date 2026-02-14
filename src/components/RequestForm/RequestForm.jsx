@@ -105,13 +105,14 @@ const MultiStepForm = () => {
     return (
         <>
             <div className='request-form-main-container'>
-                <h3 className='request-form-heading'>Request Academic Assistance</h3>
+                <h3 className='request-form-heading'> Get Started in 60 Seconds</h3>
+                <p className='request-subtitle'>Tell us what you need and we’ll match you with the perfect expert.</p>
                 <div className="request-form-card">
 
                     {step === 1 ? (
                         <div className="step-container">
                             <div className="form-header">
-                                <h2 className="form-title">Start Your Request</h2>
+                                <h2 className="form-title"></h2>
                                 <div className="form-dots">
                                     <span className="dot yellow"></span>
                                     <span className="dot gray"></span>
@@ -176,7 +177,7 @@ const MultiStepForm = () => {
 
                                 </div>
                                 <button className="continue-btn" onClick={handleNextStep}>
-                                    Continue <span>→</span>
+                                    Continue  <span>→</span>
                                 </button>
                             </div>
                         </div>
@@ -281,7 +282,7 @@ const MultiStepForm = () => {
 
                             <span className="check-icon">✓</span>
 
-                            <p>100% Confidential - Your information is secure with us. We respect your privacy.</p>
+                            <p>🔒 100% Confidential. Your information is protected with end-to-end encryption. We never share your details.</p>
 
                         </div>
 

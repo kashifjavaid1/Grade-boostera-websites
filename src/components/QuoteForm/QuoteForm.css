@@ -204,6 +204,7 @@
     .quote-modal-card {
         padding: 25px 20px;
         border-radius: 16px;
+        margin: 0px 10px;
     }
 }
 
@@ -236,5 +237,15 @@
 @media (max-width: 768px) {
     .upload-box-dashed {
         padding: 20px;
+    }
+
+    .main-title {
+
+        font-size: 17px;
+
+    }
+
+    .close-btn-x {
+        right: 10px;
     }
 }

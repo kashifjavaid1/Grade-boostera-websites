@@ -16,6 +16,13 @@
 .request-form-heading {
     text-align: center;
     font-size: 30px;
+    color: #152d42;
+    font-weight: 700;
+}
+
+.request-subtitle {
+    text-align: center;
+    padding-top: 10px;
 }
 
 .form-header {
@@ -26,7 +33,7 @@
 }
 
 .form-title {
-    color: #1a237e;
+    color: #316fa6;
     font-size: 24px;
     font-weight: 800;
 }
