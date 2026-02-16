@@ -5,43 +5,38 @@ import './Faq.css';
 const FAQ_DATA = [
     {
         id: 1,
-        question: "How does EDUOriginals ensure the quality of work?",
-        answer: "Our quality assurance process involves multiple layers of review. Each project is handled by a subject matter expert and then cross-checked for academic accuracy, formatting, and originality before final delivery."
+        question: "How does GradeBooster ensure the quality of work?",
+        answer: "Every order is handled by a degree-holding expert who specializes in your exact subject. Before delivery, each submission goes through our multi-step quality assurance process including plagiarism checks, formatting reviews, and accuracy verification. We don’t cut corners, and it shows in the grades."
     },
     {
         id: 2,
-        question: "What if I'm not satisfied with the work I receive?",
-        answer: "Your satisfaction is our priority. If you're not completely satisfied with the delivered work, you can request revisions within our revision policy period. Our experts will make the necessary changes according to your feedback at no additional cost."
+        question: "What if I’m not satisfied with the work I receive?",
+        answer: "Your satisfaction is non-negotiable. If the work doesn’t meet your expectations, we offer unlimited free revisions. If we still can’t get it right, you’re entitled to a full refund under our money-back guarantee. We’re not happy until you are."
     },
     {
         id: 3,
         question: "How do you maintain confidentiality?",
-        answer: "We use end-to-end encryption for all communications. Your personal details and project information are never shared with third parties, ensuring 100% privacy and security at all times."
+        answer: " Privacy is the foundation of everything we do. All communications are encrypted, we never store your academic credentials beyond what’s needed, and our experts sign strict non-disclosure agreements. In five years and 10,000+ orders, we’ve never had a single privacy breach."
     },
     {
         id: 4,
         question: "What subjects and academic levels do you cover?",
-        answer: "We cover a vast range of subjects from Nursing and Engineering to Law and Business, supporting students from Undergraduate all the way to PhD levels with specialized experts for each field."
+        answer: "We cover 100+ subjects across every academic level from freshman courses to doctoral research. Whether it’s nursing, business, computer science, mathematics, psychology, engineering, or anything in between, we have a verified specialist ready to help."
     },
     {
         id: 5,
-        question: "How far in advance should I place my order?",
-        answer: "While we can handle urgent deadlines (as short as 6-12 hours), we recommend placing orders at least 3-5 days in advance for complex dissertations or long projects to ensure maximum quality."
+        question: "Can I communicate directly with my assigned expert?",
+        answer: " Absolutely. We encourage direct communication so your expert understands your voice, your professor’s style, and your specific requirements. You can message them anytime through our secure platform or via WhatsApp through your advisor."
     },
     {
         id: 6,
-        question: "Can I communicate directly with my assigned expert?",
-        answer: "Yes, our platform allows for seamless communication. You can provide additional instructions, track progress, and ask questions directly to ensure the work aligns perfectly with your expectations."
+        question: "What payment methods do you accept?",
+        answer: "We accept all major credit cards (Visa, Mastercard), PayPal, Zelle, CashApp, Venmo, and bank transfers. We also offer flexible payment plans for larger orders so cost is never a barrier to getting the help you need."
     },
     {
         id: 7,
-        question: "What payment methods do you accept?",
-        answer: "We accept all major credit/debit cards, PayPal, and secure bank transfers. All transactions are processed through encrypted gateways to ensure your financial data stays protected."
-    },
-    {
-        id: 8,
         question: "Is using academic assistance services ethical?",
-        answer: "Our services are designed as educational aids to help students better understand complex topics and improve their own academic skills. We provide model papers and research assistance intended for reference and learning purposes."
+        answer: "GradeBooster operates as a tutoring and academic support service. Our work is designed to serve as a reference and learning tool. Many students use our deliverables to understand complex concepts, improve their writing, and build stronger study habits. How you use the material is ultimately your decision."
     }
 ];
 

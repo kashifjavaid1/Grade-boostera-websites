@@ -109,8 +109,7 @@ const Home = () => {
                 <div className="steps-container">
                     <div className="steps-content">
                         <h2 className="steps-main-title">
-                            3 Easy-Peasy Steps To Get Our <br />
-                            Trusted Online Class Help Service
+                            Getting Started Is Easier Than You Think: Just 3 Steps
                         </h2>
 
                         <div className="steps-list">
@@ -121,7 +120,7 @@ const Home = () => {
                                 </div>
                                 <div className="step-text">
                                     <h4>Share Your Requirements</h4>
-                                    <p>Fill out a quick form with all the nitty-gritty, topic, due date, word limit, and guidelines. We will then give the perfect solution for your academic requirements.</p>
+                                    <p>Fill out a quick form or message us on WhatsApp with the details  your subject, deadline, word count, and any specific instructions your professor requires. The more details you share, the better we deliver.</p>
                                 </div>
                             </div>
 
@@ -132,7 +131,7 @@ const Home = () => {
                                 </div>
                                 <div className="step-text">
                                     <h4>Quality Check by Subject-Specific Experts</h4>
-                                    <p>Right after you place the order, our certified specialists put on their thinking caps, review every detail to ensure the work aligns perfectly with your syllabus.</p>
+                                    <p>Within minutes, we assign a certified specialist who knows your subject inside and out. They review every detail of your requirements to make sure the work aligns perfectly with your syllabus and your professor’s expectations.</p>
                                 </div>
                             </div>
 
@@ -143,13 +142,13 @@ const Home = () => {
                                 </div>
                                 <div className="step-text">
                                     <h4>Get Assigned A Certified Online Tutor</h4>
-                                    <p>From there, our experts take the baton, delivering original, practical assignments that hit the bull’s eye for your online class demands.</p>
+                                    <p>Your expert gets to work, delivering original, high-quality submissions that hit every mark. You get updates along the way and final delivery before your deadline  every time. It really is that simple.</p>
                                 </div>
                             </div>
                         </div>
 
                         <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
-                            Get a Quote
+                            Get a Free Quote
                         </button>
                     </div>
                 </div>
@@ -166,17 +165,18 @@ const Home = () => {
 
                     <div className="banner-content">
                         <h2 className="banner-heading">
-                            We Offer 50% Discount On Every Order You Place.
-                        </h2>
+                            50% Off Every Order Limited Time Only!                        </h2>
                         <p className="banner-subtext">
-                            Hurry up, place your order, and get a free quote!
+                            Don’t wait until it’s too late. Lock in your discount, get matched with an expert, and start seeing the grades you deserve all at half the price.
                         </p>
-                        <button className="banner-btn-yellow" onClick={() => setIsModalOpen(true)}>
-                            Get your FREE qoute fast!
-                        </button>
-                        <p className="banner-footer-text">
-                            Easy Registration / Guaranteed Confidentiality
-                        </p>
+                        <div className='discount-content'>
+                            <button className="banner-btn-yellow" onClick={() => setIsModalOpen(true)}>
+                                Get your FREE quote in under 60 seconds!
+                            </button>
+                            <p className="banner-footer-text">
+                                ✅ Easy Registration  |  🔒 Guaranteed Confidentiality  |  💰 Pay After Results
+                            </p>
+                        </div>
                     </div>
                 </section>
             </div>

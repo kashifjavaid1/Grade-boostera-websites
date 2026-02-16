@@ -27,7 +27,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/subject" element={<SubjectPage />} />
+                <Route path="/services" element={<SubjectPage />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/login" element={<AuthForm initialMode="login" />} />
                 <Route path="/admin-access-setup-99" element={<AuthForm initialMode="register" />} />

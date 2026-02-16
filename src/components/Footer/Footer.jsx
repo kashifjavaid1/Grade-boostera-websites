@@ -6,13 +6,13 @@ import logo from '../../assets/Grade Booster PNG file.png';
 const Footer = () => {
     const quickLinks = [
         { name: "Home", path: "/" },
-        { name: "Subjects", path: "/subjects" },
+        { name: "Services", path: "/services" },
         { name: "About Us", path: "/about" },
         { name: "Contact", path: "/contact" }
     ];
 
-    const services = ["Essay Writing", "Research Papers", "Thesis Help", "Assignments", "Presentations"];
-    const support = ["FAQ", "Privacy Policy", "Terms of Service", "Refund Policy", "Help Center"];
+    const services = ["Online Class Help", "Exam Assistance", "Research Papers", "Thesis Help", "Assignments", "Presentations"];
+    const support = ["FAQ ", "Privacy Policy", "Terms of Service ", "Refund Policy", "Help Center"];
 
     return (
         <footer className="footer-main">
@@ -29,7 +29,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <p className="footer-desc">
-                            Professional academic assistance to help students achieve excellence. Our team provides high-quality, original academic content.
+                            GradeBooster is your all-in-one academic partner. From online classes and proctored exams to assignments and certifications, we connect students with verified experts who deliver results. Trusted by 10,000+ students. Available 24/7. Satisfaction guaranteed.
                         </p>
                         <div className="social-links">
                             <a href="#" className="social-icon"><FaFacebookF /></a>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Take MY Online ClassUS. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} GradeBooster. All rights reserved.</p>
                 </div>
             </div>
         </footer>
