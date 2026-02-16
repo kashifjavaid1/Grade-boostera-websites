@@ -49,56 +49,56 @@ const Home = () => {
 
             {/* why choose Session */}
             <section className="why-choose-section">
-                <h2 className="section-title">Why Choose Us</h2>
+                <h2 className="section-title">Why Thousands of Students Choose GradeBooster Over Anyone Else</h2>
 
                 <div className="why-choose-grid">
                     <div className="why-card">
                         <div className="why-icon-box blue-bg">✔</div>
                         <div className="why-text">
-                            <h4>Quality Guaranteed</h4>
-                            <p>Every assignment is crafted by qualified experts who specialize in your subject area, ensuring high-quality, original content.</p>
+                            <h4>✔ Quality Guaranteed</h4>
+                            <p>Every piece of work is handled by a degree-holding specialist in your exact subject area. No generalists, no guesswork, just sharp, original work that earns the grades you’re paying for</p>
                         </div>
                     </div>
 
                     <div className="why-card">
                         <div className="why-icon-box purple-bg">🔒</div>
                         <div className="why-text">
-                            <h4>Strict Confidentiality</h4>
-                            <p>Your personal information and assignment details are protected with bank-level security and absolute privacy.</p>
+                            <h4>🔒 Strict Confidentiality</h4>
+                            <p>Your identity stays invisible. We use encrypted communications and a strict no-disclosure policy. Your school, your professors, and your classmates will never know. That’s a promise we’ve kept for 10,000+ students.</p>
                         </div>
                     </div>
 
                     <div className="why-card">
                         <div className="why-icon-box red-bg">🚀</div>
                         <div className="why-text">
-                            <h4>On-Time Delivery</h4>
-                            <p>We understand the importance of deadlines. Your work will be delivered on or before the agreed deadline, guaranteed.</p>
+                            <h4>🚀 On-Time Delivery</h4>
+                            <p> We don’t just meet deadlines — we beat them. Every assignment, quiz, and exam is completed with time to spare so you can review it before submission. Zero late penalties, guaranteed.</p>
                         </div>
                     </div>
 
                     <div className="why-card">
                         <div className="why-icon-box green-bg">🎧</div>
                         <div className="why-text">
-                            <h4>24/7 Support</h4>
-                            <p>Our friendly support team is available around the clock to address any questions or concerns you might have.</p>
+                            <h4>🎧 24/7 Support</h4>
+                            <p>Got a question at 2 AM before a morning exam? We’re here. Our support team is available 24/7 via WhatsApp, email, and live chat. Average response time: under 2 minutes.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="gold-promise-box">
                     <div className="promise-left">
-                        <h3>Our Gold Standard Promise</h3>
-                        <p>EDUOriginals is committed to maintaining the highest standards of academic integrity and excellence. We believe in empowering students with quality assistance that helps them succeed.</p>
+                        <h3>The GradeBooster Promise</h3>
+                        <p>We don’t just help you pass, we help you stand out. GradeBooster is built on a commitment to academic excellence, originality, and the kind of quality that earns top marks. Every order comes with our ironclad guarantees.</p>
 
                         <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
-                            Get a Quote
+                            Get a Free Quote
                         </button>
                     </div>
                     <div className="promise-right">
                         <ul>
-                            <li><span>✔</span> Plagiarism-free work, always</li>
-                            <li><span>✔</span> Free revisions within policy</li>
-                            <li><span>✔</span> Money-back guarantee</li>
+                            <li><span>✔</span> 100% plagiarism-free work, every single time</li>
+                            <li><span>✔</span> Free unlimited revisions until you’re completely satisfied</li>
+                            <li><span>✔</span> Full money-back guarantee if we don’t deliver as promised</li>
                         </ul>
                     </div>
                 </div>

@@ -33,25 +33,25 @@ const Testimonials = () => {
             name: "Michael Johnson",
             major: "Medical Student",
             rating: 5,
-            review: "EDUOriginals helped me balance my clinical rotations with my research papers. The quality of work was exceptional, and the team was responsive to all my questions and requirements."
+            review: "I was drowning between clinical rotations and research deadlines. GradeBooster stepped in and handled all my coursework while I focused on patient care. The work was flawless  well-researched, properly cited, and delivered before every deadline. I wouldn’t have survived the semester without them."
         },
         {
             name: "Jessica Williams",
             major: "Business Major",
             rating: 5,
-            review: "I needed help with my business analysis case study, and EDUOriginals delivered beyond my expectations. The attention to detail and the quality of insights were outstanding."
+            review: "The business case study they delivered was genuinely better than anything I could have written myself. The market analysis was sharp, the recommendations were data-driven, and my professor actually complimented the depth of research. These guys don’t just do the work  they do it like they care about your grade as much as you do."
         },
         {
             name: "David Chen",
             major: "Computer Science Student",
             rating: 4,
-            review: "The programming assignment assistance I received was exactly what I needed. The code was well-documented and the explanations helped me understand the concepts better."
+            review: "My Java assignment came back with clean, well-documented code and inline comments that actually explained the logic. I didn’t just submit it. I learned from it. That’s what sets GradeBooster apart from other services I’ve tried. Only reason it’s not 5 stars is I wish they had a student discount."
         }
     ];
 
     return (
         <section className="testimonials-section">
-            <h2 className="section-title">What Our Students Say</h2>
+            <h2 className="section-title">Hear It From Students Who’ve Been Where You Are</h2>
             <div className="reviews-container">
                 {reviewsData.map((item, index) => (
                     <ReviewCard

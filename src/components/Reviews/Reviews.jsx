@@ -13,7 +13,7 @@ const Reviews = () => {
             img: "https://i.pravatar.cc/150?u=11",
             reviews: "180",
             orders: "260",
-            description: "As an accounting teacher with 15+ years of experience, I must say that if you truly want a service that makes you stand out in your class, then TakeMyOnlineClassUs should be your first priority."
+            description: "With over 15 years of experience teaching accounting at the university level, I understand exactly what professors look for. When I handle your coursework through GradeBooster, I treat every assignment like my own reputation is on the line, because it is.”"
         },
         {
             id: 2,
@@ -21,7 +21,7 @@ const Reviews = () => {
             img: "https://i.pravatar.cc/150?u=12",
             reviews: "180",
             orders: "260",
-            description: "I have been teaching history to students for the past ten years, and I must say that TakeMyOnlineClassUs is the best at what they do. I would highly recommend their do my online class help service."
+            description: "Ten years of teaching history taught me one thing, students don’t struggle because they’re not smart enough, they struggle because they’re stretched too thin. That’s why I joined GradeBooster. I bring the same academic rigor I use in my classroom to every assignment I complete."
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ const Reviews = () => {
             img: "https://i.pravatar.cc/150?u=13",
             reviews: "180",
             orders: "260",
-            description: "As a dedicated business teacher, I've always believed in helping my students with the best resources. That's why I cannot recommend TakeMyOnlineClassUs highly enough! It won't be wrong to say they provide top-notch services."
+            description: "As a business instructor, I’ve graded thousands of papers, so I know exactly what earns top marks and what falls flat. When you hire me through GradeBooster, you’re getting someone who writes at the level that impresses professors, not just passes."
         },
         {
             id: 4,
@@ -61,8 +61,8 @@ const Reviews = () => {
     return (
         <>
             <section className="reviews-section">
-                <h2 className="reviews-title">Certified Professionals For Every Subject</h2>
-                <p className="reviews-subtitle">Our certified professionals cover every little detail in our online classes.</p>
+                <h2 className="reviews-title">Meet the Experts Behind Your Grades</h2>
+                <p className="reviews-subtitle">Every expert on our team is hand-picked, credential-verified, and passionate about their subject. They don’t just complete your work, they make sure it stands out.</p>
 
                 <div className="slider-wrapper">
                     <button className="slide-arrow left-arrow" onClick={() => scroll('left')}>❮</button>

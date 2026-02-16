@@ -7,31 +7,30 @@ const Services = () => {
         {
             title: "Assignments",
             icon: <FaFileAlt />,
-            text: "Late submissions? Not on our watch. Our assignment submission service with 24/7 student support doesn’t just keep you up, we make sure you never miss a beat."
+            text: "Late submissions? That word doesn’t exist in our vocabulary. Every assignment is researched, written, and submitted before your deadline, no excuses, no extensions needed. Our 24/7 team makes sure you never miss a single due date, no matter how tight the turnaround."
         },
         {
             title: "Quizzes",
             icon: <FaFileSignature />,
-            text: "Our online tutors don’t just sit back and watch, they take the wheel when it comes to quizzes and modules. They give quizzes and small assessments every now and then, so you stay on track."
+            text: "Weekly quizzes and pop assessments can make or break your grade. Our subject experts stay ahead of your course schedule, tackling every quiz with precision so your scores stay consistently high throughout the entire semester."
         },
         {
             title: "Exams",
             icon: <FaUserEdit />,
-            text: "Our subject matter experts help you learn time-bound exam strategies through interactive and data-driven progress monitoring."
+            text: "Midterms, finals, proctored or timed, it doesn’t matter. Our exam specialists have seen every format and every platform. They work under pressure so you don’t have to, delivering the scores that move your GPA in the right direction."
         },
         {
             title: "Discussions",
             icon: <FaComments />,
-            text: "Stuck in a thread or lost in a post? Our team is always active on discussion forums and weighs in with smart, to-the-point replies."
+            text: "Discussion boards count more than most students realize. Our team crafts thoughtful, well-argued posts and responses that show genuine engagement with the material, the kind that professors notice and reward with full participation marks."
         }
     ];
 
     return (
         <section className="services-section">
-            <h2 className="services-title">Assignments, Quizzes, Exams, and Discussions</h2>
+            <h2 className="services-title">We Handle Every Part of Your Online Class; Not Just the Easy Stuff</h2>
             <p className="services-subtitle">
-                Assignments, quizzes, and group discussions play a very important role in preparing you for your exams.
-                With our online class help service, we give you all these time to time to help you improve your grades.
+                Your online class isn’t just one exam, it’s a marathon of assignments, quizzes, group posts, and high-stakes tests. We take care of all of it, start to finish, so nothing slips through the cracks.
             </p>
 
             <div className="services-container">
